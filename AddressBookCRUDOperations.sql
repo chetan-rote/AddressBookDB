@@ -15,3 +15,13 @@ create table addressBook_Table
  phoneNumber bigint not null,
  emailId varchar(50) not null
  );
+ /*UC3*/
+ /*Inserting contacts to Address Book table.*/
+  insert into addressBook_Table (firstName, secondName, address, city, state, zip, phoneNumber, emailId)
+ values
+ ('Chetan', 'Rote', 'Kisanrao Nagar', 'Jalgaon', 'Maharashtra', 9865478596, 425001, 'chetan@gmail.com'),
+ ('Kunal', 'Warke', 'Lohegaon', 'Pune', 'Maharashtra', 8569547856, 414245, 'kunal@gmail.com'),
+ ('Shubham', 'Sapkale', 'Raisoni', 'Aurangabad', 'Maharashtra', 954684552, 425322, 'shubham@gmail.com'),
+ ('Aashish', 'Patil', 'Kharghar', 'Navi Mumbai', 'Maharashtra', 7589654125, 402325, 'patil@gmail.com');
+ /*Displaying the contacts from table*/
+ select * from addressBook_Table
