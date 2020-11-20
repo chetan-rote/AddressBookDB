@@ -32,3 +32,10 @@ where firstName = 'Kunal' and secondName = 'Warke';
 /*UC5*/
 /* Delete the row entry from the address book table where name matches */
  delete from addressBook_Table where firstName ='Shubham' and secondName = 'Sapkale';
+ /*UC6*/
+ /* Displaying the contact from the address book table matching the state */
+ select * from addressBook_Table
+ where state = 'Maharashtra';
+ /* Displaying the contact from the address book table matching the city */
+ select * from addressBook_Table
+ where city = 'Pune';
