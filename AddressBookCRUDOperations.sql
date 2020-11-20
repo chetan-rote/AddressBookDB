@@ -53,3 +53,10 @@ where firstName = 'Kunal' and secondName = 'Warke';
  select * from addressBook_Table
  where city = 'Pune'
  order by firstName;
+
+ /*UC9*/
+ /* Adding the columns for address book name and type of address book 
+ to the address book table */
+ alter table addressBook_Table
+ add addressBookType varchar(30), addressBookName varchar(40);
+
