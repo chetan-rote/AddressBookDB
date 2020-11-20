@@ -25,3 +25,7 @@ create table addressBook_Table
  ('Aashish', 'Patil', 'Kharghar', 'Navi Mumbai', 'Maharashtra', 7589654125, 402325, 'patil@gmail.com');
  /*Displaying the contacts from table*/
  select * from addressBook_Table
+ /*UC4*/
+ /*Edit existing contact using their name*/
+ update addressBook_Table set address = 'Dhayari' 
+where firstName = 'Kunal' and secondName = 'Warke';
