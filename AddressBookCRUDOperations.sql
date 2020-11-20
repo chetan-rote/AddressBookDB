@@ -19,10 +19,10 @@ create table addressBook_Table
  /*Inserting contacts to Address Book table.*/
   insert into addressBook_Table (firstName, secondName, address, city, state, zip, phoneNumber, emailId)
  values
- ('Chetan', 'Rote', 'Kisanrao Nagar', 'Jalgaon', 'Maharashtra', 9865478596, 425001, 'chetan@gmail.com'),
- ('Kunal', 'Warke', 'Lohegaon', 'Pune', 'Maharashtra', 8569547856, 414245, 'kunal@gmail.com'),
- ('Shubham', 'Sapkale', 'Raisoni', 'Aurangabad', 'Maharashtra', 954684552, 425322, 'shubham@gmail.com'),
- ('Aashish', 'Patil', 'Kharghar', 'Navi Mumbai', 'Maharashtra', 7589654125, 402325, 'patil@gmail.com');
+ ('Rohan', 'Sharma', 'Nagar', 'Vasant kunj', 'Delhi', 9865478596, 110057, 'rohan@gmail.com'),
+ ('Kartik', 'Keni', 'Sec1', 'Kochi', 'Kerala', 8569547856, 754565, 'kartik@gmail.com'),
+ ('Shubham', 'Dubey', 'Kp nagar', 'Bhopal', 'MP', 954684552, 321546, 'shubham@gmail.com'),
+ ('Aashish', 'Verma', 'Dosa', 'Jaipur', 'Rajasthan', 7589654125, 402325, 'aashish@gmail.com');
  /*Displaying the contacts from table*/
  select * from addressBook_Table
  /*UC4*/
@@ -39,3 +39,13 @@ where firstName = 'Kunal' and secondName = 'Warke';
  /* Displaying the contact from the address book table matching the city */
  select * from addressBook_Table
  where city = 'Pune';
+
+ /*UC7*/
+ /* displaying the count of contacts by city*/
+ select city,count(*) as 'Number of Contacts'
+ from addressBook_Table 
+ group by city;
+ /* displaying the count of contacts by state*/
+ select state,count(*) as 'Number of Contacts'
+ from addressBook_Table 
+ group by state;
