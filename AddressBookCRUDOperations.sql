@@ -60,3 +60,9 @@ where firstName = 'Kunal' and secondName = 'Warke';
  alter table addressBook_Table
  add addressBookType varchar(30), addressBookName varchar(40);
 
+ /*UC10*/
+/* Renaming the addressBookType columns to contactType in the address book table */
+EXEC sp_rename 'addressBook_Table.addressBookType', 'contactType';
+/* Getting the contact count grouping by the contact type */
+select contactType, COUNT(*) as 'Number Of Contacts'
+from addressBook_Table group by contactType;
