@@ -19,10 +19,8 @@ create table addressBook_Table
  /*Inserting contacts to Address Book table.*/
   insert into addressBook_Table (firstName, secondName, address, city, state, zip, phoneNumber, emailId)
  values
- ('Rohan', 'Sharma', 'Nagar', 'Vasant kunj', 'Delhi', 9865478596, 110057, 'rohan@gmail.com'),
- ('Kartik', 'Keni', 'Sec1', 'Kochi', 'Kerala', 8569547856, 754565, 'kartik@gmail.com'),
- ('Shubham', 'Dubey', 'Kp nagar', 'Bhopal', 'MP', 954684552, 321546, 'shubham@gmail.com'),
- ('Aashish', 'Verma', 'Dosa', 'Jaipur', 'Rajasthan', 7589654125, 402325, 'aashish@gmail.com');
+ ('Prashant', 'Patil', 'Karve', 'Pune', 'Maharashtra', 8569547856, 754565, 'prashant@gmail.com'),
+ ('Aashish', 'Patil', 'Aundh', 'Pune', 'Maharashtra', 7589654125, 402325, 'aashish@gmail.com');
  /*Displaying the contacts from table*/
  select * from addressBook_Table
  /*UC4*/
@@ -49,3 +47,9 @@ where firstName = 'Kunal' and secondName = 'Warke';
  select state,count(*) as 'Number of Contacts'
  from addressBook_Table 
  group by state;
+
+ /*UC8*/
+ /* Sorting alphabetically in ascending order by the name and belonging to a city say delhi*/
+ select * from addressBook_Table
+ where city = 'Pune'
+ order by firstName;
