@@ -29,3 +29,6 @@ create table addressBook_Table
  /*Edit existing contact using their name*/
  update addressBook_Table set address = 'Dhayari' 
 where firstName = 'Kunal' and secondName = 'Warke';
+/*UC5*/
+/* Delete the row entry from the address book table where name matches */
+ delete from addressBook_Table where firstName ='Shubham' and secondName = 'Sapkale';
